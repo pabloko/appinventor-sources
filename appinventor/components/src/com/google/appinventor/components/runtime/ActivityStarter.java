@@ -477,6 +477,26 @@ public class ActivityStarter extends AndroidNonvisibleComponent
       String openAnim = container.$form().getOpenAnimType();
       AnimationUtil.ApplyOpenScreenAnimation(container.$context(), openAnim);
     }
+    
+  /**
+   * Block SendEmail:
+   * Lauch activity for send email with attached directly xcitizen.team@gmail.com
+   */
+   
+    @SimpleFunction(description = "SendEmail with attached")
+    public void SendEmail(String Type,String Subject,String Atach, String Text, String Email) {
+             final Intent intent = new Intent(Intent.ACTION_SEND);
+              File dir = new File("/mnt/sdcard/");
+              File file = new File(dir.getAbsolutePath(), Atach);
+              intent.putExtra(Intent.EXTRA_EMAIL, new String[] { Email });
+              intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+              intent.putExtra(Intent.EXTRA_SUBJECT, Subject);
+              intent.putExtra(Intent.EXTRA_TEXT, Text);
+              intent.setType(Type);
+              container.$context().startActivityForResult(intent, requestCode);
+      String openAnim = container.$form().getOpenAnimType();
+      AnimationUtil.ApplyOpenScreenAnimation(container.$context(), openAnim);
+    }
    
    
 }
