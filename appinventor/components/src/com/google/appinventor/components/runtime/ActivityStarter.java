@@ -482,7 +482,8 @@ public class ActivityStarter extends AndroidNonvisibleComponent
    * Block SendEmail:
    * Lauch activity for send email with attached directly xcitizen.team@gmail.com
    */
-   
+   /*
+   not ready to compile 
     @SimpleFunction(description = "SendEmail with attached")
     public void SendEmail(String Type,String Subject,String Atach, String Text, String Email) {
              final Intent intent = new Intent(Intent.ACTION_SEND);
@@ -498,5 +499,5 @@ public class ActivityStarter extends AndroidNonvisibleComponent
       AnimationUtil.ApplyOpenScreenAnimation(container.$context(), openAnim);
     }
    
-   
+   */
 }
