@@ -160,7 +160,7 @@ public class GoogleCloudMessaging extends AndroidNonvisibleComponent implements 
 		public void run() 
 		{
 			 processCachedMessages();
-			 handler.postDelayed(this, 500);
+			 handler.postDelayed(this, 3000);
 		}
 	};
   
